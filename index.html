@@ -1,0 +1,422 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#570b16" />
+
+  <title>Engagement Invitation</title>
+  <meta
+    name="description"
+    content="Join us to celebrate the engagement of Rahul and Anjali."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="topline"></div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <a
+      class="brand"
+      href="#open-invitation"
+      data-monogram
+      aria-label="Engagement invitation"
+    ></a>
+
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Toggle navigation"
+      aria-expanded="false"
+      aria-controls="nav"
+    >
+      ☰
+    </button>
+
+    <nav id="nav" aria-label="Main navigation">
+      <a href="#open-invitation">Invitation</a>
+      <a href="#story">Our Story</a>
+      <a href="#details">Venue</a>
+      <a href="#scratch-date">Reveal the Date</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#location">RSVP</a>
+    </nav>
+
+    <button
+      class="music-btn"
+      id="musicToggle"
+      type="button"
+      aria-pressed="false"
+    >
+      ♫ <span>Play Music</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ENVELOPE INVITATION -->
+    <section
+      class="envelope-section"
+      id="open-invitation"
+      aria-labelledby="envelopeHeading"
+    >
+      <p class="envelope-eyebrow">A SPECIAL INVITATION</p>
+
+      <h2 id="envelopeHeading">Something Beautiful Awaits</h2>
+
+      <p class="envelope-subtitle">
+        A little surprise, sealed with love.
+      </p>
+
+      <div class="envelope-scene" id="envelopeScene">
+        <div class="invitation-card">
+          <span class="invitation-flourish">✧ ❦ ✧</span>
+
+          <p class="invitation-kicker">
+            TOGETHER WITH OUR FAMILIES
+          </p>
+
+          <p class="invitation-intro">
+            We joyfully invite you to celebrate the engagement of
+          </p>
+
+          <h3 class="invitation-names">
+            <span
+              id="envelopeCoupleNames"
+              class="coupleNamesText"
+            ></span>
+          </h3>
+
+          <div class="invitation-divider">♡</div>
+
+          <p class="invitation-message">
+            Two hearts, one beautiful journey,<br />
+            and a day we wish to share with you.
+          </p>
+
+          <span class="invitation-flourish">
+            With love, always
+          </span>
+        </div>
+
+        <div class="envelope">
+          <div class="envelope-back"></div>
+          <div class="envelope-left"></div>
+          <div class="envelope-right"></div>
+          <div class="envelope-bottom"></div>
+          <div class="envelope-flap"></div>
+
+          <button
+            class="wax-seal"
+            id="openEnvelopeBtn"
+            type="button"
+            aria-label="Tap to open the engagement invitation"
+            aria-expanded="false"
+            aria-controls="envelopeScene"
+          >
+            <span class="seal-monogram" data-monogram></span>
+            <span class="seal-instruction">TAP HERE</span>
+          </button>
+        </div>
+      </div>
+
+      <p class="envelope-footnote" id="envelopeFootnote">
+        <span>♡</span>
+        A message from our hearts to yours
+        <span>♡</span>
+      </p>
+
+      <button
+        type="button"
+        class="envelope-replay"
+        id="replayEnvelopeBtn"
+        hidden
+      >
+        Open it again ↻
+      </button>
+    </section>
+
+    <!-- OUR STORY -->
+    <section class="story section-light" id="story">
+      <div class="mandala mandala-left">✺</div>
+
+      <div class="story-photo">
+        <div class="photo-placeholder" data-monogram>
+          <small>A NEW CHAPTER BEGINS</small>
+        </div>
+      </div>
+
+      <div class="story-copy">
+        <p class="eyebrow dark">OUR STORY</p>
+
+        <h2>Two Hearts, One Journey</h2>
+
+        <div class="ornament dark-ornament">
+          ❧ <span>✦</span> ❧
+        </div>
+
+        <p>
+          From friendship to love, from dreams to forever…
+        </p>
+
+        <p>
+          We’re beginning a beautiful new chapter and would be
+          delighted to have you with us as we celebrate this
+          special moment.
+        </p>
+
+        <p class="signature">
+          With love,
+          <span class="coupleNamesText"></span>
+        </p>
+      </div>
+
+      <div class="mandala mandala-right">✺</div>
+    </section>
+
+    <!-- VENUE DETAILS: NO DATE OR TIME -->
+    <section class="details" id="details">
+      <div class="details-copy">
+        <p class="eyebrow">COME CELEBRATE WITH US</p>
+
+        <h2>A Place to Make Memories</h2>
+
+        <div class="ornament">
+          ❧ <span>✦</span> ❧
+        </div>
+
+        <div class="detail-grid">
+          <div class="detail-item">
+            <span class="detail-icon" aria-hidden="true">⌖</span>
+
+            <div>
+              <h3>Venue</h3>
+              <p id="venueName"></p>
+              <p class="muted" id="venueAddress"></p>
+            </div>
+          </div>
+        </div>
+
+        <a
+          class="button outline-button"
+          id="mapLink"
+          href="https://www.google.com/maps"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ⌖ &nbsp; Get Directions
+        </a>
+      </div>
+
+      <div class="ganesha" aria-hidden="true">
+        <span>ॐ</span>
+        <div>♧</div>
+        <small>शुभारंभ</small>
+      </div>
+    </section>
+
+    <!-- SCRATCH TO REVEAL DATE AND COUNTDOWN -->
+    <section
+      class="scratch-section"
+      id="scratch-date"
+      aria-labelledby="scratchHeading"
+    >
+      <p class="eyebrow">A LITTLE SURPRISE</p>
+
+      <h2 id="scratchHeading">A Special Moment Awaits</h2>
+
+      <p class="scratch-instruction">
+        Scratch away the gold to reveal our special day.
+      </p>
+
+      <div class="scratch-card" id="scratchCard">
+        <div class="scratch-reveal">
+          <span class="scratch-sparkle">✧ ♡ ✧</span>
+
+          <p>THE DAY OUR NEXT CHAPTER BEGINS</p>
+
+          <h3 id="scratchDateText"></h3>
+
+          <div class="scratch-countdown">
+            <p class="countdown-heading">
+              COUNTING DOWN TO FOREVER
+            </p>
+
+            <div
+              class="countdown"
+              aria-label="Countdown to the engagement"
+            >
+              <div>
+                <strong id="days">--</strong>
+                <span>Days</span>
+              </div>
+
+              <div>
+                <strong id="hours">--</strong>
+                <span>Hours</span>
+              </div>
+
+              <div>
+                <strong id="minutes">--</strong>
+                <span>Minutes</span>
+              </div>
+
+              <div>
+                <strong id="seconds">--</strong>
+                <span>Seconds</span>
+              </div>
+            </div>
+          </div>
+
+          <span class="scratch-bottom">
+            WE CAN'T WAIT TO CELEBRATE WITH YOU
+          </span>
+        </div>
+
+        <canvas
+          id="scratchCanvas"
+          aria-label="Scratch the gold coating to reveal the date and countdown"
+        ></canvas>
+      </div>
+
+      <p class="scratch-hint" id="scratchHint" aria-live="polite">
+        ✨ Rub here with your finger or mouse
+      </p>
+
+      <button
+        class="scratch-reset"
+        id="scratchReset"
+        type="button"
+      >
+        Start Again ↻
+      </button>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery section-light" id="gallery">
+      <p class="eyebrow dark">LITTLE MOMENTS, BIG LOVE</p>
+
+      <h2>Moments That Matter</h2>
+
+      <div class="ornament dark-ornament">
+        ❧ <span>✦</span> ❧
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-card card-one">
+          <span>♡</span>
+          <small>A PROMISE</small>
+        </div>
+
+        <div class="gallery-card card-two">
+          <span>✿</span>
+          <small>TRADITIONS</small>
+        </div>
+
+        <div class="gallery-card card-three">
+          <span>✦</span>
+          <small>TOGETHER</small>
+        </div>
+
+        <div class="gallery-card card-four">
+          <span>❀</span>
+          <small>FOREVER</small>
+        </div>
+      </div>
+
+      <p class="gallery-note">
+        Replace these decorative placeholders with your favourite photos.
+      </p>
+    </section>
+
+    <!-- LOCATION AND RSVP -->
+    <section class="location-section" id="location">
+      <div class="location-card">
+        <p class="eyebrow dark">FIND US</p>
+
+        <h2>We Can't Wait to See You</h2>
+
+        <p>
+          Your presence will make our celebration even more special.
+        </p>
+
+        <a
+          class="button maroon-button"
+          id="mapLink2"
+          href="https://www.google.com/maps"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Open Google Maps ↗
+        </a>
+      </div>
+
+      <div class="rsvp-card">
+        <p class="eyebrow">LET'S CELEBRATE TOGETHER</p>
+
+        <h2>Your presence is our present.</h2>
+
+        <p>Please let us know if you can join us.</p>
+
+        <a
+          class="button gold-button"
+          id="rsvpLink"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          RSVP on WhatsApp
+        </a>
+
+        <div class="share-area">
+          <p>Share this invitation</p>
+
+          <button
+            class="share-button"
+            id="shareWhatsApp"
+            type="button"
+          >
+            WhatsApp ↗
+          </button>
+
+          <button
+            class="share-button secondary"
+            id="copyLink"
+            type="button"
+          >
+            Copy Link
+          </button>
+
+          <span id="copyStatus" aria-live="polite"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER: NO DATE -->
+  <footer>
+    <div class="footer-monogram" data-monogram></div>
+
+    <p class="coupleNamesText"></p>
+
+    <p class="footer-blessing">Forever begins here ✦</p>
+  </footer>
+
+  <!-- BACKGROUND MUSIC -->
+  <audio id="backgroundMusic" loop preload="none"></audio>
+</body>
+</html>
+```
